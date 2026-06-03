@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* High-Density Grid Styling */
+			/* Architect-Grade Grid Logic */
 			#main > .post.featured { 
 				padding: 3rem 2rem !important; 
 				border-bottom: 2px solid #eeeeee; 
@@ -16,7 +16,6 @@
 			
 			.posts {
 				display: grid;
-				/* Creates 3 columns on wide screens, 2 on tablets, 1 on mobile */
 				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 				gap: 1.5rem;
 				padding: 2rem;
@@ -26,7 +25,7 @@
 				padding: 1.5rem !important; 
 				border: 1px solid #ddd;
 				background: #fcfcfc;
-				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				transition: all 0.2s ease-in-out;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -34,9 +33,9 @@
 			}
 
 			.posts article:hover {
-				box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-				transform: translateY(-5px);
-				border-color: #a0a0a0;
+				box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+				transform: translateY(-3px);
+				border-color: #777;
 			}
 
 			.project-tag {
@@ -44,8 +43,17 @@
 				font-weight: 800;
 				text-transform: uppercase;
 				letter-spacing: 1.5px;
-				color: #777;
+				color: #888;
 				margin-bottom: 0.5rem;
+			}
+
+			.tech-stack {
+				font-size: 0.7rem;
+				font-family: "Courier New", Courier, monospace;
+				color: #555;
+				margin-top: 0.5rem;
+				border-top: 1px solid #eee;
+				padding-top: 0.5rem;
 			}
 
 			.status-badge {
@@ -53,13 +61,14 @@
 				padding: 2px 8px;
 				border-radius: 4px;
 				font-size: 0.6rem;
-				background: #e0e0e0;
+				font-weight: bold;
+				background: #eee;
 				margin-top: 1rem;
 				width: fit-content;
 			}
 
-			h2 { font-size: 1.25rem !important; line-height: 1.4 !important; }
-			p { font-size: 0.9rem !important; line-height: 1.6; margin-bottom: 1rem; }
+			h2 { font-size: 1.2rem !important; line-height: 1.3 !important; margin-bottom: 0.5rem !important;}
+			p { font-size: 0.85rem !important; line-height: 1.5; margin-bottom: 1rem; color: #444; }
 			
 			.image.fit { display: none; }
 		</style>
@@ -89,7 +98,7 @@
 					<header class="major">
 						<span class="project-tag">Strategic Oversight</span>
 						<h2>AI Assembled</h2>
-						<p>Architectural blueprints for "Intelligence Plumbing." Focused on production-grade agentic infrastructure, LLMOps, and enterprise governance.</p>
+						<p>Architectural blueprints for "Intelligence Plumbing." Focused on production-grade agentic infrastructure, LLMOps, and enterprise governance to bridge the gap between raw models and secure systems.</p>
 						<ul class="actions special">
 							<li><a href="https://aiassembled.substack.com/" class="button large">Read Architecture Blogs</a></li>
 						</ul>
@@ -100,10 +109,11 @@
 					
 					<article>
 						<header>
-							<span class="project-tag">Governance</span>
+							<span class="project-tag">Governance & Compliance</span>
 							<h2>Enterprise Agentic<br />Audit Engine</h2>
 						</header>
 						<p>Ensures deterministic oversight for probabilistic models. A framework for auditing agentic workflows in enterprise environments.</p>
+						<div class="tech-stack">Stack: Python, LLM Orchestration, Audit Logs</div>
 						<ul class="actions special">
 							<li><a href="https://github.com/dnyandeobharambe/enterprise-agentic-audit-engine" class="button small">Source</a></li>
 						</ul>
@@ -112,10 +122,11 @@
 
 					<article>
 						<header>
-							<span class="project-tag">RAG</span>
+							<span class="project-tag">Data Architecture</span>
 							<h2>Enterprise Agentic<br />RAG Engine</h2>
 						</header>
-						<p>Advanced RAG (Diet Engine) implementation focusing on contextual relevance and data integrity at scale.</p>
+						<p>Advanced RAG (Diet Engine) implementation focusing on contextual relevance and data integrity at scale for enterprise knowledge bases.</p>
+						<div class="tech-stack">Stack: Vector DBs, Semantic Search, Python</div>
 						<ul class="actions special">
 							<li><a href="https://github.com/dnyandeobharambe/agentic-diet-engine" class="button small">Source</a></li>
 						</ul>
@@ -124,10 +135,24 @@
 
 					<article>
 						<header>
-							<span class="project-tag">Orchestration</span>
+							<span class="project-tag">Security & Adversarial AI</span>
+							<h2>OWASP Prompt Injection<br />Mitigation Layer</h2>
+						</header>
+						<p>Framework for identifying and neutralizing prompt injection attacks. Implementing guardrails based on OWASP Top 10 for LLMs.</p>
+						<div class="tech-stack">Stack: Guardrails, Validation Layers, Security-as-Code</div>
+						<ul class="actions special">
+							<li><a href="#" class="button small">Research</a></li>
+						</ul>
+						<span class="status-badge">In Development</span>
+					</article>
+
+					<article>
+						<header>
+							<span class="project-tag">Agent Orchestration</span>
 							<h2>Multi-Agent<br />Framework</h2>
 						</header>
-						<p>Exploring state management and communication protocols for complex multi-agent reasoning chains.</p>
+						<p>Engineering complex inter-agent communication and state management protocols for multi-step reasoning chains.</p>
+						<div class="tech-stack">Stack: Agentic Orchestration, State Machines</div>
 						<ul class="actions special">
 							<li><a href="https://github.com/dnyandeobharambe/multi_agent" class="button small">Source</a></li>
 						</ul>
@@ -136,25 +161,23 @@
 
 					<article>
 						<header>
-							<span class="project-tag">Cloud Infrastructure</span>
-							<h2>Cloud-Native AI<br />Deployment</h2>
+							<span class="project-tag">Domain Category</span>
+							<h2>Future Project<br />Title</h2>
 						</header>
-						<p>Standardized templates for deploying high-availability AI services across hybrid cloud environments.</p>
+						<p>Brief description of the architectural problem being solved and the technical approach used.</p>
+						<div class="tech-stack">Stack: Tooling, Language, Infrastructure</div>
 						<ul class="actions special">
 							<li><a href="#" class="button small">Soon</a></li>
 						</ul>
-						<span class="status-badge">In Development</span>
+						<span class="status-badge">Planned</span>
 					</article>
 					
-					</section>
+				</section>
 
 			</div>
 
 			<div id="copyright">
-				<ul>
-					<li>&copy; Dnyandeo Bharambe</li>
-					<li>Seattle, WA</li>
-				</ul>
+				<ul><li>&copy; Dnyandeo Bharambe</li><li>Seattle, WA</li></ul>
 			</div>
 
 		</div>
