@@ -1,102 +1,166 @@
-﻿<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Portfolio | Principal Systems Architect</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* High-Density Grid Styling */
+			#main > .post.featured { 
+				padding: 3rem 2rem !important; 
+				border-bottom: 2px solid #eeeeee; 
+				text-align: center;
+			}
+			
+			.posts {
+				display: grid;
+				/* Creates 3 columns on wide screens, 2 on tablets, 1 on mobile */
+				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+				gap: 1.5rem;
+				padding: 2rem;
+			}
+
+			.posts article { 
+				padding: 1.5rem !important; 
+				border: 1px solid #ddd;
+				background: #fcfcfc;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
+			}
+
+			.posts article:hover {
+				box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+				transform: translateY(-5px);
+				border-color: #a0a0a0;
+			}
+
+			.project-tag {
+				font-size: 0.65rem;
+				font-weight: 800;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				color: #777;
+				margin-bottom: 0.5rem;
+			}
+
+			.status-badge {
+				display: inline-block;
+				padding: 2px 8px;
+				border-radius: 4px;
+				font-size: 0.6rem;
+				background: #e0e0e0;
+				margin-top: 1rem;
+				width: fit-content;
+			}
+
+			h2 { font-size: 1.25rem !important; line-height: 1.4 !important; }
+			p { font-size: 0.9rem !important; line-height: 1.6; margin-bottom: 1rem; }
+			
+			.image.fit { display: none; }
+		</style>
 	</head>
 	<body class="is-preload">
 
-		<!-- Wrapper -->
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
+			<header id="header">
+				<a href="index.html" class="logo">Systems Architecture & AI Infrastructure</a>
+			</header>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="https://dnyandeobharambe.github.io/" class="logo">...</a>
+			<nav id="nav">
+				<ul class="links">
+					<li class="active"><a href="index.html">Technical Portfolio</a></li>
+					<li><a href="https://aiassembled.substack.com/">AI Assembled Substack</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/dnyandeo/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/dnyandeobharambe" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<article class="post featured">
+					<header class="major">
+						<span class="project-tag">Strategic Oversight</span>
+						<h2>AI Assembled</h2>
+						<p>Architectural blueprints for "Intelligence Plumbing." Focused on production-grade agentic infrastructure, LLMOps, and enterprise governance.</p>
+						<ul class="actions special">
+							<li><a href="https://aiassembled.substack.com/" class="button large">Read Architecture Blogs</a></li>
+						</ul>
 					</header>
+				</article>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">My Work</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/dnyandeo/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/dnyandeobharambe" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							
-						<!-- Posts -->
-							<section class="posts">
-								
-								<article>
-									<header>
-										<h2><a href="#">Portfolio</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/AI2.jpg" alt="" /></a>
-									
-									<ul class="actions special">
-										<li><a href="https://github.com/dnyandeobharambe/enterprise-agentic-audit-engine" class="button">Enterprise-Agentic-Audit-Engine</a></li>
-									</ul>
-									<ul class="actions special">
-										<li><a href="https://github.com/dnyandeobharambe/agentic-diet-engine" class="button">Agentic-Diet-Engine</a></li>
-									</ul>
-									<ul class="actions special">
-										<li><a href="https://github.com/dnyandeobharambe/multi_agent" class="button">Multi_Agent</a></li>
-									</ul>
-										
-								</article>
-								
-								<article>
-									<header>
-										<h2><a href="#">Blogs</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/blogs.jpg" alt="" /></a>
-									
-									<ul class="actions special">
-										<li><a href="https://aiassembled.substack.com/" class="button">More</a></li>
-									</ul>
-									
-								</article>
-								
-							</section>
-
-						<!-- Footer -->
-							
-
-					</div>
-
-				<!-- Footer -->
+				<section class="posts">
 					
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+					<article>
+						<header>
+							<span class="project-tag">Governance</span>
+							<h2>Enterprise Agentic<br />Audit Engine</h2>
+						</header>
+						<p>Ensures deterministic oversight for probabilistic models. A framework for auditing agentic workflows in enterprise environments.</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/dnyandeobharambe/enterprise-agentic-audit-engine" class="button small">Source</a></li>
+						</ul>
+						<span class="status-badge">Production-Ready</span>
+					</article>
 
-			
+					<article>
+						<header>
+							<span class="project-tag">RAG</span>
+							<h2>Enterprise Agentic<br />RAG Engine</h2>
+						</header>
+						<p>Advanced RAG (Diet Engine) implementation focusing on contextual relevance and data integrity at scale.</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/dnyandeobharambe/agentic-diet-engine" class="button small">Source</a></li>
+						</ul>
+						<span class="status-badge">Stable</span>
+					</article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+					<article>
+						<header>
+							<span class="project-tag">Orchestration</span>
+							<h2>Multi-Agent<br />Framework</h2>
+						</header>
+						<p>Exploring state management and communication protocols for complex multi-agent reasoning chains.</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/dnyandeobharambe/multi_agent" class="button small">Source</a></li>
+						</ul>
+						<span class="status-badge">Research</span>
+					</article>
+
+					<article>
+						<header>
+							<span class="project-tag">Cloud Infrastructure</span>
+							<h2>Cloud-Native AI<br />Deployment</h2>
+						</header>
+						<p>Standardized templates for deploying high-availability AI services across hybrid cloud environments.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button small">Soon</a></li>
+						</ul>
+						<span class="status-badge">In Development</span>
+					</article>
+					
+					</section>
+
+			</div>
+
+			<div id="copyright">
+				<ul>
+					<li>&copy; Dnyandeo Bharambe</li>
+					<li>Seattle, WA</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
