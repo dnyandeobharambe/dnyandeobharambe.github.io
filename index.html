@@ -8,149 +8,47 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			#main > .post.featured { 
-				padding: 3rem 2rem !important; 
-				border-bottom: 2px solid #eeeeee; 
-				text-align: center;
-			}
-			
-			.posts {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-				gap: 1.5rem;
-				padding: 2rem;
-			}
-
-			.posts article { 
-				padding: 1.5rem !important; 
-				border: 1px solid #ddd;
-				background: #fcfcfc;
-				transition: all 0.2s ease-in-out;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				height: 100%;
-			}
-
-			.posts article:hover {
-				box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-				transform: translateY(-3px);
-				border-color: #777;
-			}
-
-			.project-tag {
-				font-size: 0.65rem;
-				font-weight: 800;
-				text-transform: uppercase;
-				letter-spacing: 1.5px;
-				color: #888;
-				margin-bottom: 0.5rem;
-			}
-
-			.tech-stack {
-				font-size: 0.7rem;
-				font-family: "Courier New", Courier, monospace;
-				color: #555;
-				margin-top: 0.5rem;
-				border-top: 1px solid #eee;
-				padding-top: 0.5rem;
-			}
-
-			.status-badge {
-				display: inline-block;
-				padding: 2px 8px;
-				border-radius: 4px;
-				font-size: 0.6rem;
-				font-weight: bold;
-				background: #eee;
-				margin-top: 1rem;
-				width: fit-content;
-			}
-
-			h2 { font-size: 1.2rem !important; line-height: 1.3 !important; margin-bottom: 0.5rem !important;}
-			p { font-size: 0.85rem !important; line-height: 1.5; margin-bottom: 1rem; color: #444; }
-			
+			#main > .post.featured { padding: 3rem 2rem !important; border-bottom: 2px solid #eeeeee; text-align: center; }
+			.posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; padding: 2rem; }
+			.posts article { padding: 1.5rem !important; border: 1px solid #ddd; background: #fcfcfc; transition: all 0.2s ease-in-out; display: flex; flex-direction: column; justify-content: space-between; }
+			.posts article:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: #777; }
+			.project-tag { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin-bottom: 0.5rem; display: block; }
+			.tech-stack { font-size: 0.68rem; font-family: "Courier New", Courier, monospace; color: #555; margin-top: 0.5rem; border-top: 1px solid #eee; padding-top: 0.5rem; }
+			.status-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.6rem; font-weight: bold; background: #eee; margin-top: 0.8rem; }
+			h2 { font-size: 1.1rem !important; line-height: 1.3 !important; margin-bottom: 0.4rem !important; }
+			p { font-size: 0.82rem !important; line-height: 1.5; margin-bottom: 0.8rem; color: #444; }
 			.image.fit { display: none; }
-
-			/* Bio section */
-			.bio-section {
-				max-width: 780px;
-				margin: 0 auto 1rem auto;
-				text-align: center;
-				padding: 0 1rem;
-			}
-
-			.bio-section .name {
-				font-size: 1.6rem;
-				font-weight: 700;
-				color: #222;
-				margin-bottom: 0.3rem;
-				letter-spacing: -0.5px;
-			}
-
-			.bio-section .title-line {
-				font-size: 0.85rem;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				color: #888;
-				margin-bottom: 1.2rem;
-			}
-
-			.bio-section .bio-text {
-				font-size: 0.88rem !important;
-				line-height: 1.7 !important;
-				color: #555 !important;
-				margin-bottom: 1rem !important;
-			}
-
-			.bio-tags {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 6px;
-				justify-content: center;
-				margin-top: 0.8rem;
-			}
-
-			.bio-tag {
-				font-size: 0.65rem;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				color: #555;
-				background: #f0f0f0;
-				padding: 3px 10px;
-				border-radius: 3px;
-			}
-
-			.blog-links {
-				display: flex;
-				gap: 12px;
-				justify-content: center;
-				margin-top: 1rem;
-				flex-wrap: wrap;
-			}
-
-			.blog-link {
-				font-size: 0.75rem;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				color: #444;
-				text-decoration: none;
-				border-bottom: 2px solid #ddd;
-				padding-bottom: 2px;
-				transition: border-color 0.2s;
-			}
-
-			.blog-link:hover {
-				border-color: #888;
-				color: #222;
-			}
+			.bio-section { max-width: 780px; margin: 0 auto 1rem auto; text-align: center; padding: 0 1rem; }
+			.bio-section .name { font-size: 1.6rem; font-weight: 700; color: #222; margin-bottom: 0.3rem; letter-spacing: -0.5px; }
+			.bio-section .title-line { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-bottom: 1.2rem; }
+			.bio-section .bio-text { font-size: 0.88rem !important; line-height: 1.7 !important; color: #555 !important; margin-bottom: 1rem !important; }
+			.bio-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 0.8rem; }
+			.bio-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #555; background: #f0f0f0; padding: 3px 10px; border-radius: 3px; }
+			.blog-links { display: flex; gap: 12px; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+			.blog-link { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #444; text-decoration: none; border-bottom: 2px solid #ddd; padding-bottom: 2px; transition: border-color 0.2s; }
+			.blog-link:hover { border-color: #888; color: #222; }
+			.arch-diagram { margin: 0.8rem 0; background: #f9f9f9; border: 1px solid #eee; border-radius: 6px; padding: 0.6rem; }
+			.arch-diagram svg text { font-family: "Courier New", monospace; }
+			.services-section { background: #f8f8f8; border-top: 2px solid #eee; border-bottom: 2px solid #eee; padding: 3rem 2rem; text-align: center; }
+			.services-section .section-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2.5px; color: #aaa; margin-bottom: 0.4rem; }
+			.services-section .section-sub { font-size: 0.85rem !important; color: #777 !important; max-width: 560px; margin: 0 auto 2.5rem auto !important; line-height: 1.6 !important; }
+			.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; max-width: 1000px; margin: 0 auto 2.5rem auto; text-align: left; }
+			.service-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 1.4rem 1.2rem; transition: box-shadow 0.2s, border-color 0.2s; }
+			.service-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); border-color: #bbb; }
+			.service-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+			.service-name { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #333; margin-bottom: 0.4rem; }
+			.service-desc { font-size: 0.78rem !important; color: #666 !important; line-height: 1.55 !important; margin-bottom: 0.6rem !important; }
+			.service-for { font-size: 0.68rem; font-style: italic; color: #999; }
+			.services-cta { margin-top: 0.5rem; }
+			.services-cta a { display: inline-block; padding: 0.7rem 2rem; background: #222; color: #fff !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; border-radius: 4px; margin: 0.3rem; transition: background 0.2s; }
+			.services-cta a:hover { background: #444; }
+			.services-cta a.secondary { background: transparent; color: #444 !important; border: 1px solid #ccc; }
+			.services-cta a.secondary:hover { background: #f0f0f0; border-color: #999; }
+			.portfolio-heading { text-align: center; padding: 2rem 2rem 0 2rem; }
+			.portfolio-heading .section-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2.5px; color: #aaa; margin-bottom: 0.4rem; }
 		</style>
 	</head>
 	<body class="is-preload">
-
 		<div id="wrapper" class="fade-in">
 
 			<header id="header">
@@ -171,119 +69,306 @@
 
 			<div id="main">
 
+				<!-- BIO -->
 				<article class="post featured">
 					<header class="major">
-
-						<!-- BIO SECTION -->
 						<div class="bio-section">
 							<div class="name">Dnyandeo Bharambe (Danny)</div>
-							<div class="title-line">Senior AI Architect &nbsp;·&nbsp; Seattle, WA</div>
-							<p class="bio-text">
-								Years of experience in building enterprise systems — IoT pipelines, global supply chains, B2B integration at scale.
-								Now building production agentic AI on top of the infrastructure I spent a decade mastering.
-								I build the integration and governance layer that makes enterprise AI safe, auditable, and production-ready —
-								not just the models, but the critical systems around them.
-							</p>
-							<p class="bio-text">
-								Enterprise AI is an integration problem, not a chatbot problem.
-								Every system gets the right connector — MCP for live data, RAG for static knowledge, graph for relational.
-								The LLM reasons above this layer. It never touches enterprise systems directly.
-							</p>
+							<div class="title-line">Senior AI Architect &nbsp;&middot;&nbsp; Seattle, WA</div>
+							<p class="bio-text">Years of experience building enterprise systems — IoT pipelines, global supply chains, B2B integration at scale. Now building production agentic AI on top of the infrastructure I spent a decade mastering. I build the integration and governance layer that makes enterprise AI safe, auditable, and production-ready — not just the models, but the critical systems around them.</p>
+							<p class="bio-text">Enterprise AI is an integration problem, not a chatbot problem. Every system gets the right connector — MCP for live data, RAG for static knowledge, graph for relational. The LLM reasons above this layer. It never touches enterprise systems directly.</p>
 							<div class="bio-tags">
-								<span class="bio-tag">LangGraph</span>
-								<span class="bio-tag">MCP</span>
-								<span class="bio-tag">RAG</span>
-								<span class="bio-tag">LLM Judge</span>
-								<span class="bio-tag">HITL Governance</span>
-								<span class="bio-tag">LangSmith</span>
-								<span class="bio-tag">AgentOps</span>
-								<span class="bio-tag">FastAPI</span>
-								<span class="bio-tag">Azure</span>
-								<span class="bio-tag">A2A</span>
-								<span class="bio-tag">Presidio</span>
-								<span class="bio-tag">Docker</span>
+								<span class="bio-tag">LangGraph</span><span class="bio-tag">MCP</span><span class="bio-tag">RAG</span><span class="bio-tag">LLM Judge</span><span class="bio-tag">HITL Governance</span><span class="bio-tag">LangSmith</span><span class="bio-tag">AgentOps</span><span class="bio-tag">FastAPI</span><span class="bio-tag">Azure</span><span class="bio-tag">A2A</span><span class="bio-tag">Presidio</span><span class="bio-tag">Docker</span>
 							</div>
 							<div class="blog-links">
-								<a href="https://mcpoverrag.hashnode.dev/why-i-chose-mcp-over-rag-for-live-infrastructure-auditing" class="blog-link" target="_blank">→ Why I chose MCP over RAG</a>
-								<a href="https://aiassembled.substack.com/" class="blog-link" target="_blank">→ AI Assembled Newsletter</a>
+								<a href="https://mcpoverrag.hashnode.dev/why-i-chose-mcp-over-rag-for-live-infrastructure-auditing" class="blog-link" target="_blank">&#8594; Why I chose MCP over RAG</a>
+								<a href="https://aiassembled.substack.com/" class="blog-link" target="_blank">&#8594; AI Assembled Newsletter</a>
 							</div>
 						</div>
-
 					</header>
 				</article>
 
+				<!-- SERVICES -->
+				<div class="services-section">
+					<div class="section-label">Work With Me</div>
+					<p style="font-size:1.3rem !important; font-weight:700; color:#222 !important; margin-bottom:0.5rem !important;">How I Can Help Your Organization</p>
+					<p class="section-sub">I work with enterprise teams and engineers who need to move AI from pilot to production — or who want to understand the architecture decisions that make the difference.</p>
+					<div class="services-grid">
+						<div class="service-card"><div class="service-icon">&#127959;</div><div class="service-name">Architecture Review</div><p class="service-desc">30-minute session reviewing your AI system design — right integration pattern, where governance needs to sit, what will break before it does.</p><div class="service-for">For: Engineers and architects planning an AI system</div></div>
+						<div class="service-card"><div class="service-icon">&#128268;</div><div class="service-name">Enterprise AI Integration</div><p class="service-desc">Design and build the integration layer between AI agents and your enterprise systems — ERP, CRM, IoT, EDI. MCP or RAG, whichever the data demands.</p><div class="service-for">For: Companies moving AI pilots into production</div></div>
+						<div class="service-card"><div class="service-icon">&#128737;</div><div class="service-name">AI Governance and Safety</div><p class="service-desc">Implement HITL gates, LLM Judge patterns, observability, and OWASP LLM security controls. Build AI your compliance team will approve.</p><div class="service-for">For: Regulated industries — finance, healthcare, manufacturing</div></div>
+						<div class="service-card"><div class="service-icon">&#127891;</div><div class="service-name">Corporate Training</div><p class="service-desc">Hands-on training for engineering teams on enterprise agentic AI — real Python, real deployment, production patterns. Not notebooks. Working code.</p><div class="service-for">For: Engineering teams upskilling on agentic AI</div></div>
+						<div class="service-card"><div class="service-icon">&#128208;</div><div class="service-name">Fractional AI Architect</div><p class="service-desc">Ongoing engagement as your AI architecture lead — design decisions, vendor evaluation, team guidance, governance framework. Senior expertise without a full-time hire.</p><div class="service-for">For: Mid-size companies building AI capability</div></div>
+						<div class="service-card"><div class="service-icon">&#128269;</div><div class="service-name">AI Audit and Assessment</div><p class="service-desc">Review an existing AI system for architectural gaps, security risks, governance failures, and cost inefficiencies. Delivered as a structured report.</p><div class="service-for">For: Teams inheriting or evaluating existing AI systems</div></div>
+					</div>
+					<div class="services-cta">
+						<a href="https://topmate.io/danny32" target="_blank">Book a 30-Min Architecture Review</a>
+						<a href="https://www.linkedin.com/in/dnyandeo/" target="_blank" class="secondary">Connect on LinkedIn</a>
+					</div>
+				</div>
+
+				<!-- PORTFOLIO -->
+				<div class="portfolio-heading">
+					<div class="section-label">Open Source Work</div>
+					<p style="font-size:1.2rem !important; font-weight:700; color:#222 !important; margin-bottom:0.3rem !important;">Portfolio Projects</p>
+				</div>
+
 				<section class="posts">
-					
+
+					<!-- AUDIT ENGINE -->
 					<article>
 						<header>
-							<span class="project-tag">Governance & Compliance</span>
-							<h2>Enterprise Agentic<br />Audit Engine</h2>
+							<span class="project-tag">Governance &amp; Compliance</span>
+							<h2>Enterprise Agentic Audit Engine</h2>
 						</header>
-						<p>LangGraph agent audits distributed hardware compliance using a live MCP tool layer — not a stale RAG snapshot. An LLM Judge independently validates every verdict before it reaches the user. HITL gate blocks all autonomous write operations. Built after RAG failed in production at 2am.</p>
-						<div class="tech-stack">LangGraph · MCP · LLM Judge · FastAPI · AgentOps · HITL · NVIDIA NIM · Gemini · Docker</div>
-						<ul class="actions special">
-							<li><a href="https://github.com/dnyandeobharambe/enterprise-agentic-audit-engine" class="button small" target="_blank">View on GitHub</a></li>
-						</ul>
+						<p>LangGraph agent audits distributed hardware compliance via a live MCP tool layer. An LLM Judge validates every verdict independently. HITL gate blocks all autonomous write operations. Built after RAG failed at 2am — device drifted, vector store didn't know.</p>
+
+						<div class="arch-diagram">
+							<svg width="100%" viewBox="0 0 460 220" role="img">
+								<title>Audit engine architecture</title>
+								<desc>FastAPI gateway routes to LangGraph agent which calls MCP tools, then LLM Judge validates before HITL gate approves</desc>
+								<defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+								<!-- Row 1: Gateway -->
+								<rect x="160" y="10" width="140" height="36" rx="5" fill="#e8f0fb" stroke="#6b92d4" stroke-width="0.5"/>
+								<text x="230" y="28" text-anchor="middle" font-size="11" font-weight="600" fill="#1a4a8a" dominant-baseline="central">FastAPI Gateway</text>
+								<text x="230" y="40" text-anchor="middle" font-size="9" fill="#4a6a9a" dominant-baseline="central">rate limit · auth · routing</text>
+
+								<!-- Arrow down -->
+								<line x1="230" y1="46" x2="230" y2="64" stroke="#999" stroke-width="1" marker-end="url(#a1)"/>
+
+								<!-- Row 2: LangGraph Agent -->
+								<rect x="130" y="64" width="200" height="36" rx="5" fill="#e1f5ee" stroke="#1D9E75" stroke-width="0.8"/>
+								<text x="230" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#0a5c40" dominant-baseline="central">LangGraph Agent</text>
+								<text x="230" y="94" text-anchor="middle" font-size="9" fill="#0f6e56" dominant-baseline="central">state machine · intent routing</text>
+
+								<!-- Arrows to MCP tools -->
+								<line x1="165" y1="100" x2="85" y2="118" stroke="#999" stroke-width="1" marker-end="url(#a1)"/>
+								<line x1="230" y1="100" x2="230" y2="118" stroke="#999" stroke-width="1" marker-end="url(#a1)"/>
+								<line x1="295" y1="100" x2="375" y2="118" stroke="#999" stroke-width="1" marker-end="url(#a1)"/>
+
+								<!-- Row 3: MCP Tools -->
+								<rect x="20" y="118" width="120" height="34" rx="5" fill="#faeeda" stroke="#BA7517" stroke-width="0.5"/>
+								<text x="80" y="134" text-anchor="middle" font-size="10" font-weight="600" fill="#633806" dominant-baseline="central">get_inventory()</text>
+								<text x="80" y="145" text-anchor="middle" font-size="9" fill="#854F0B" dominant-baseline="central">live device state</text>
+
+								<rect x="170" y="118" width="120" height="34" rx="5" fill="#faeeda" stroke="#BA7517" stroke-width="0.5"/>
+								<text x="230" y="134" text-anchor="middle" font-size="10" font-weight="600" fill="#633806" dominant-baseline="central">query_policy()</text>
+								<text x="230" y="145" text-anchor="middle" font-size="9" fill="#854F0B" dominant-baseline="central">compliance rules</text>
+
+								<rect x="320" y="118" width="120" height="34" rx="5" fill="#faeeda" stroke="#BA7517" stroke-width="0.5"/>
+								<text x="380" y="134" text-anchor="middle" font-size="10" font-weight="600" fill="#633806" dominant-baseline="central">flag_violation()</text>
+								<text x="380" y="145" text-anchor="middle" font-size="9" fill="#854F0B" dominant-baseline="central">mark non-compliant</text>
+
+								<!-- Arrow up from MCP back to agent then down to Judge -->
+								<line x1="230" y1="152" x2="230" y2="168" stroke="#999" stroke-width="1" marker-end="url(#a1)"/>
+
+								<!-- Row 4: LLM Judge -->
+								<rect x="130" y="168" width="200" height="34" rx="5" fill="#fcebeb" stroke="#E24B4A" stroke-width="0.8"/>
+								<text x="230" y="183" text-anchor="middle" font-size="11" font-weight="600" fill="#7c1a1a" dominant-baseline="central">LLM Judge</text>
+								<text x="230" y="195" text-anchor="middle" font-size="9" fill="#A32D2D" dominant-baseline="central">independent verdict · fresh context</text>
+
+								<!-- HITL badge -->
+								<rect x="345" y="172" width="100" height="26" rx="5" fill="#eeedfe" stroke="#534AB7" stroke-width="0.5"/>
+								<text x="395" y="185" text-anchor="middle" font-size="9" font-weight="600" fill="#3C3489" dominant-baseline="central">HITL Gate</text>
+								<text x="395" y="194" text-anchor="middle" font-size="8" fill="#534AB7" dominant-baseline="central">human approves</text>
+								<line x1="330" y1="185" x2="347" y2="185" stroke="#999" stroke-width="1" marker-end="url(#a1)"/>
+							</svg>
+						</div>
+
+						<div class="tech-stack">LangGraph &middot; MCP &middot; LLM Judge &middot; FastAPI &middot; AgentOps &middot; HITL &middot; NVIDIA NIM &middot; Gemini &middot; Docker</div>
+						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/enterprise-agentic-audit-engine" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">Production-Ready</span>
 					</article>
 
+					<!-- DIET ENGINE -->
 					<article>
 						<header>
 							<span class="project-tag">Advanced RAG</span>
-							<h2>Agentic Diet<br />Engine</h2>
+							<h2>Agentic Diet Engine</h2>
 						</header>
-						<p>Advanced RAG pipeline for personalized health AI — hybrid search combining vector and keyword retrieval, ChromaDB vector store, LangSmith observability, FastAPI backend, Streamlit UI. Deployed on Hugging Face with full CI/CD pipeline via GitHub Actions.</p>
-						<div class="tech-stack">LangChain · ChromaDB · LangSmith · FastAPI · Streamlit · Hugging Face · GitHub Actions · Docker</div>
-						<ul class="actions special">
-							<li><a href="https://github.com/dnyandeobharambe/agentic-diet-engine" class="button small" target="_blank">View on GitHub</a></li>
-						</ul>
+						<p>Advanced RAG pipeline for personalized health AI. Hybrid search combining vector and keyword retrieval over ChromaDB. LangSmith observability traces every retrieval step. FastAPI backend with Streamlit UI, deployed on Hugging Face via GitHub Actions CI/CD.</p>
+
+						<div class="arch-diagram">
+							<svg width="100%" viewBox="0 0 460 210" role="img">
+								<title>Diet engine RAG architecture</title>
+								<desc>User query goes through hybrid retriever combining vector and keyword search on ChromaDB, then LLM generates response with LangSmith tracing</desc>
+								<defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+								<!-- User query -->
+								<rect x="160" y="10" width="140" height="34" rx="5" fill="#e8f0fb" stroke="#6b92d4" stroke-width="0.5"/>
+								<text x="230" y="26" text-anchor="middle" font-size="11" font-weight="600" fill="#1a4a8a" dominant-baseline="central">Streamlit UI</text>
+								<text x="230" y="37" text-anchor="middle" font-size="9" fill="#4a6a9a" dominant-baseline="central">user query</text>
+
+								<line x1="230" y1="44" x2="230" y2="62" stroke="#999" stroke-width="1" marker-end="url(#a2)"/>
+
+								<!-- FastAPI -->
+								<rect x="160" y="62" width="140" height="30" rx="5" fill="#e1f5ee" stroke="#1D9E75" stroke-width="0.5"/>
+								<text x="230" y="77" text-anchor="middle" font-size="11" font-weight="600" fill="#0a5c40" dominant-baseline="central">FastAPI Backend</text>
+
+								<line x1="230" y1="92" x2="230" y2="108" stroke="#999" stroke-width="1" marker-end="url(#a2)"/>
+
+								<!-- Hybrid Retriever -->
+								<rect x="110" y="108" width="240" height="34" rx="5" fill="#faeeda" stroke="#BA7517" stroke-width="0.8"/>
+								<text x="230" y="123" text-anchor="middle" font-size="11" font-weight="600" fill="#633806" dominant-baseline="central">Hybrid Retriever</text>
+								<text x="230" y="135" text-anchor="middle" font-size="9" fill="#854F0B" dominant-baseline="central">vector search + keyword BM25 + rerank</text>
+
+								<!-- Arrows to ChromaDB -->
+								<line x1="165" y1="142" x2="90" y2="158" stroke="#999" stroke-width="1" marker-end="url(#a2)"/>
+								<line x1="295" y1="142" x2="370" y2="158" stroke="#999" stroke-width="1" marker-end="url(#a2)"/>
+
+								<rect x="20" y="158" width="130" height="30" rx="5" fill="#eeedfe" stroke="#534AB7" stroke-width="0.5"/>
+								<text x="85" y="173" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489" dominant-baseline="central">ChromaDB</text>
+
+								<rect x="310" y="158" width="130" height="30" rx="5" fill="#eeedfe" stroke="#534AB7" stroke-width="0.5"/>
+								<text x="375" y="173" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489" dominant-baseline="central">LangSmith</text>
+
+								<!-- Back up to LLM -->
+								<line x1="230" y1="142" x2="230" y2="168" stroke="#ccc" stroke-width="0.5" stroke-dasharray="3 3"/>
+								<line x1="230" y1="168" x2="230" y2="182" stroke="#999" stroke-width="1" marker-end="url(#a2)"/>
+
+								<rect x="145" y="182" width="170" height="22" rx="5" fill="#fcebeb" stroke="#E24B4A" stroke-width="0.5"/>
+								<text x="230" y="193" text-anchor="middle" font-size="10" font-weight="600" fill="#7c1a1a" dominant-baseline="central">LLM response + citations</text>
+							</svg>
+						</div>
+
+						<div class="tech-stack">LangChain &middot; ChromaDB &middot; LangSmith &middot; FastAPI &middot; Streamlit &middot; Hugging Face &middot; GitHub Actions &middot; Docker</div>
+						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/agentic-diet-engine" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">Live on Hugging Face</span>
 					</article>
 
+					<!-- MULTI AGENT -->
 					<article>
 						<header>
 							<span class="project-tag">Multi-Agent Systems</span>
-							<h2>Multi-Agent<br />A2A Framework</h2>
+							<h2>Multi-Agent A2A Framework</h2>
 						</header>
-						<p>Multi-agent system using LangGraph and A2A SDK for agent-to-agent communication. Microsoft Presidio PII scrubbing on all inter-agent messages. OpenTelemetry distributed tracing. Jailbreak defense layer. Built for enterprise environments where data privacy and auditability are non-negotiable.</p>
-						<div class="tech-stack">LangGraph · A2A SDK · Presidio · OpenTelemetry · LangChain · Jailbreak Defense</div>
-						<ul class="actions special">
-							<li><a href="https://github.com/dnyandeobharambe/multi_agent" class="button small" target="_blank">View on GitHub</a></li>
-						</ul>
+						<p>Multi-agent system with LangGraph and A2A SDK for agent-to-agent communication. Microsoft Presidio scrubs PII from all inter-agent messages. OpenTelemetry traces every hop. Jailbreak defense layer on all inputs. Built for enterprise environments where data privacy is non-negotiable.</p>
+
+						<div class="arch-diagram">
+							<svg width="100%" viewBox="0 0 460 210" role="img">
+								<title>Multi-agent A2A architecture</title>
+								<desc>Orchestrator agent routes tasks to specialist agents via A2A protocol, Presidio scrubs PII, OpenTelemetry traces all hops</desc>
+								<defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+								<!-- Jailbreak defense -->
+								<rect x="150" y="10" width="160" height="28" rx="5" fill="#fcebeb" stroke="#E24B4A" stroke-width="0.5"/>
+								<text x="230" y="24" text-anchor="middle" font-size="10" font-weight="600" fill="#7c1a1a" dominant-baseline="central">Jailbreak Defense Layer</text>
+
+								<line x1="230" y1="38" x2="230" y2="54" stroke="#999" stroke-width="1" marker-end="url(#a3)"/>
+
+								<!-- Orchestrator -->
+								<rect x="130" y="54" width="200" height="36" rx="5" fill="#e1f5ee" stroke="#1D9E75" stroke-width="0.8"/>
+								<text x="230" y="71" text-anchor="middle" font-size="11" font-weight="600" fill="#0a5c40" dominant-baseline="central">Orchestrator Agent</text>
+								<text x="230" y="83" text-anchor="middle" font-size="9" fill="#0f6e56" dominant-baseline="central">LangGraph · intent routing</text>
+
+								<!-- Presidio badge -->
+								<rect x="345" y="60" width="100" height="24" rx="5" fill="#faeeda" stroke="#BA7517" stroke-width="0.5"/>
+								<text x="395" y="72" text-anchor="middle" font-size="9" font-weight="600" fill="#633806" dominant-baseline="central">Presidio PII</text>
+								<line x1="330" y1="72" x2="347" y2="72" stroke="#999" stroke-width="1" marker-end="url(#a3)"/>
+
+								<!-- A2A arrows to agents -->
+								<line x1="175" y1="90" x2="90" y2="118" stroke="#534AB7" stroke-width="1.2" marker-end="url(#a3)"/>
+								<text x="118" y="107" font-size="8" fill="#534AB7" text-anchor="middle">A2A</text>
+								<line x1="230" y1="90" x2="230" y2="118" stroke="#534AB7" stroke-width="1.2" marker-end="url(#a3)"/>
+								<line x1="285" y1="90" x2="370" y2="118" stroke="#534AB7" stroke-width="1.2" marker-end="url(#a3)"/>
+								<text x="342" y="107" font-size="8" fill="#534AB7" text-anchor="middle">A2A</text>
+
+								<!-- Specialist agents -->
+								<rect x="20" y="118" width="120" height="34" rx="5" fill="#eeedfe" stroke="#534AB7" stroke-width="0.5"/>
+								<text x="80" y="133" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489" dominant-baseline="central">Research Agent</text>
+								<text x="80" y="145" text-anchor="middle" font-size="9" fill="#534AB7" dominant-baseline="central">web · docs</text>
+
+								<rect x="170" y="118" width="120" height="34" rx="5" fill="#eeedfe" stroke="#534AB7" stroke-width="0.5"/>
+								<text x="230" y="133" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489" dominant-baseline="central">Writer Agent</text>
+								<text x="230" y="145" text-anchor="middle" font-size="9" fill="#534AB7" dominant-baseline="central">structured output</text>
+
+								<rect x="320" y="118" width="120" height="34" rx="5" fill="#eeedfe" stroke="#534AB7" stroke-width="0.5"/>
+								<text x="380" y="133" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489" dominant-baseline="central">Review Agent</text>
+								<text x="380" y="145" text-anchor="middle" font-size="9" fill="#534AB7" dominant-baseline="central">quality gate</text>
+
+								<!-- OTel -->
+								<line x1="230" y1="152" x2="230" y2="172" stroke="#ccc" stroke-width="0.5" stroke-dasharray="3 3"/>
+								<rect x="150" y="172" width="160" height="26" rx="5" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+								<text x="230" y="185" text-anchor="middle" font-size="10" font-weight="600" fill="#444441" dominant-baseline="central">OpenTelemetry Tracing</text>
+							</svg>
+						</div>
+
+						<div class="tech-stack">LangGraph &middot; A2A SDK &middot; Presidio &middot; OpenTelemetry &middot; LangChain &middot; Jailbreak Defense</div>
+						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/multi_agent" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">In Progress</span>
 					</article>
 
+					<!-- OWASP -->
 					<article>
 						<header>
-							<span class="project-tag">Security & Adversarial AI</span>
-							<h2>OWASP LLM<br />Security Implementations</h2>
+							<span class="project-tag">Security &amp; Adversarial AI</span>
+							<h2>OWASP LLM Security Implementations</h2>
 						</header>
-						<p>Production implementations of OWASP LLM Top 10 — not just theory. Every risk has a vulnerable example and a mitigated example with real working code. LLM01 Prompt Injection complete with 4-layer defense: input sanitization, structured prompt separation, LLM Judge validation, and security logging.</p>
-						<div class="tech-stack">Anthropic SDK · Presidio · LangGraph · FastAPI · Pydantic · OWASP · MITRE ATLAS</div>
-						<ul class="actions special">
-							<li><a href="https://github.com/dnyandeobharambe/owasp-llm-security" class="button small" target="_blank">View on GitHub</a></li>
-						</ul>
+						<p>Production implementations of OWASP LLM Top 10 — not theory. Every risk has a vulnerable example and a mitigated example with real code. LLM01 Prompt Injection complete with 4-layer defense: input sanitization, structured separation, LLM Judge validation, and security logging.</p>
+
+						<div class="arch-diagram">
+							<svg width="100%" viewBox="0 0 460 210" role="img">
+								<title>OWASP LLM security defense layers</title>
+								<desc>User input passes through four defense layers: sanitization, structured prompt separation, LLM response, then LLM Judge validation before reaching user</desc>
+								<defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+								<!-- Attacker input -->
+								<rect x="160" y="10" width="140" height="28" rx="5" fill="#fcebeb" stroke="#E24B4A" stroke-width="0.8"/>
+								<text x="230" y="24" text-anchor="middle" font-size="11" font-weight="600" fill="#7c1a1a" dominant-baseline="central">User Input (untrusted)</text>
+
+								<line x1="230" y1="38" x2="230" y2="54" stroke="#999" stroke-width="1" marker-end="url(#a4)"/>
+
+								<!-- Layer 1: Sanitize -->
+								<rect x="120" y="54" width="220" height="28" rx="5" fill="#faeeda" stroke="#BA7517" stroke-width="0.6"/>
+								<text x="230" y="68" text-anchor="middle" font-size="10" font-weight="600" fill="#633806" dominant-baseline="central">Layer 1: Input Sanitization</text>
+								<text x="420" y="68" text-anchor="start" font-size="8" fill="#888" dominant-baseline="central">regex · length limit</text>
+
+								<line x1="230" y1="82" x2="230" y2="98" stroke="#999" stroke-width="1" marker-end="url(#a4)"/>
+
+								<!-- Layer 2: Structured prompt -->
+								<rect x="120" y="98" width="220" height="28" rx="5" fill="#faeeda" stroke="#BA7517" stroke-width="0.6"/>
+								<text x="230" y="112" text-anchor="middle" font-size="10" font-weight="600" fill="#633806" dominant-baseline="central">Layer 2: Structured Separation</text>
+								<text x="420" y="112" text-anchor="start" font-size="8" fill="#888" dominant-baseline="central">XML bounds · role lock</text>
+
+								<line x1="230" y1="126" x2="230" y2="142" stroke="#999" stroke-width="1" marker-end="url(#a4)"/>
+
+								<!-- Layer 3: LLM -->
+								<rect x="130" y="142" width="200" height="28" rx="5" fill="#e1f5ee" stroke="#1D9E75" stroke-width="0.6"/>
+								<text x="230" y="156" text-anchor="middle" font-size="10" font-weight="600" fill="#0a5c40" dominant-baseline="central">Layer 3: Primary LLM</text>
+
+								<line x1="230" y1="170" x2="230" y2="186" stroke="#999" stroke-width="1" marker-end="url(#a4)"/>
+
+								<!-- Layer 4: Judge -->
+								<rect x="120" y="186" width="220" height="18" rx="5" fill="#eeedfe" stroke="#534AB7" stroke-width="0.8"/>
+								<text x="230" y="195" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489" dominant-baseline="central">Layer 4: LLM Judge (independent) &#10003;</text>
+
+								<!-- Blocked path -->
+								<rect x="355" y="148" width="90" height="22" rx="4" fill="#fcebeb" stroke="#E24B4A" stroke-width="0.5"/>
+								<text x="400" y="159" text-anchor="middle" font-size="9" font-weight="600" fill="#A32D2D" dominant-baseline="central">BLOCKED &#10007;</text>
+								<line x1="330" y1="159" x2="353" y2="159" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2" marker-end="url(#a4)"/>
+							</svg>
+						</div>
+
+						<div class="tech-stack">Anthropic SDK &middot; Presidio &middot; LangGraph &middot; FastAPI &middot; Pydantic &middot; OWASP &middot; MITRE ATLAS</div>
+						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/owasp-llm-security" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">In Development</span>
 					</article>
 
-					
 				</section>
 
 			</div>
 
 			<div id="copyright">
 				<ul>
-					<li>&copy; Dnyandeo Bharambe</li>
-					<li>Seattle, WA</li>
+					<li>&copy; Dnyandeo Bharambe</li><li>Seattle, WA</li>
 					<li><a href="https://www.linkedin.com/in/dnyandeo/" target="_blank">LinkedIn</a></li>
 					<li><a href="https://mcpoverrag.hashnode.dev/" target="_blank">Blog</a></li>
 				</ul>
 			</div>
 
 		</div>
-
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
