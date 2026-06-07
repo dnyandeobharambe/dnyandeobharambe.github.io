@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dnyandeobharambe.github.io/sitemap.xml
