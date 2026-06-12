@@ -94,9 +94,12 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			#main > .post.featured { padding: 3rem 2rem !important; border-bottom: 2px solid #eeeeee; text-align: center; }
-			.posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; padding: 2rem; }
-			.posts article { padding: 1.5rem !important; border: 1px solid #ddd; background: #fcfcfc; transition: all 0.2s ease-in-out; display: flex; flex-direction: column; justify-content: space-between; }
-			.posts article:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: #777; }
+			.posts { display: flex; flex-direction: column; gap: 0; padding: 1rem 2rem 2rem 2rem; max-width: 1100px; margin: 0 auto; }
+			.posts article { display: grid; grid-template-columns: 400px 1fr; gap: 2.5rem; padding: 2rem 1rem 2rem 1rem !important; border: none; border-bottom: 1px solid #eeeeee; background: #fff; transition: background 0.15s; align-items: start; }
+			.posts article:last-child { border-bottom: none; }
+			.posts article.no-diagram { grid-template-columns: 1fr; }
+			.posts article:hover { background: #fafbfc; }
+			@media (max-width: 768px) { .posts article { grid-template-columns: 1fr !important; } }
 			.project-tag { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin-bottom: 0.5rem; display: block; }
 			.tech-stack { font-size: 0.68rem; font-family: "Courier New", Courier, monospace; color: #555; margin-top: 0.5rem; border-top: 1px solid #eee; padding-top: 0.5rem; }
 			.status-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.6rem; font-weight: bold; background: #eee; margin-top: 0.8rem; }
@@ -186,12 +189,7 @@
 
 					<!-- AUDIT ENGINE -->
 					<article>
-						<header>
-							<span class="project-tag">Governance &amp; Compliance</span>
-							<h2>Enterprise Agentic Audit Engine</h2>
-						</header>
-						<p>LangGraph agent audits distributed hardware compliance via a live MCP tool layer. An LLM Judge validates every verdict independently. HITL gate blocks all autonomous write operations. Built after RAG failed at 2am — device drifted, vector store didn't know. Designed for enterprise environments where AI must be auditable, compliant, and production-ready.</p>
-
+					<div class="article-left">
 						<div class="arch-diagram">
 							<svg width="100%" viewBox="0 0 460 220" role="img">
 								<title>Audit engine architecture</title>
@@ -226,19 +224,22 @@
 								<line x1="330" y1="185" x2="347" y2="185" stroke="#999" stroke-width="1" marker-end="url(#a1)"/>
 							</svg>
 						</div>
+					</div>
+					<div class="article-right">
+						<header>
+							<span class="project-tag">Governance &amp; Compliance</span>
+							<h2>Enterprise Agentic Audit Engine</h2>
+						</header>
+						<p>LangGraph agent audits distributed hardware compliance via a live MCP tool layer. An LLM Judge validates every verdict independently. HITL gate blocks all autonomous write operations. Built after RAG failed at 2am — device drifted, vector store didn't know. Designed for enterprise environments where AI must be auditable, compliant, and production-ready.</p>
 						<div class="tech-stack">LangGraph &middot; MCP &middot; LLM Judge &middot; FastAPI &middot; AgentOps &middot; HITL &middot; NVIDIA NIM &middot; Gemini &middot; Docker</div>
 						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/enterprise-agentic-audit-engine" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">Production-Ready</span>
-					</article>
+					</div>
+				</article>
 
 					<!-- DIET ENGINE -->
 					<article>
-						<header>
-							<span class="project-tag">Advanced RAG</span>
-							<h2>Agentic Diet Engine</h2>
-						</header>
-						<p>Advanced RAG pipeline for personalized health AI. Hybrid search combining vector and keyword retrieval over ChromaDB. LangSmith observability traces every retrieval step. FastAPI backend with Streamlit UI, deployed on Hugging Face via GitHub Actions CI/CD.</p>
-
+					<div class="article-left">
 						<div class="arch-diagram">
 							<svg width="100%" viewBox="0 0 460 210" role="img">
 								<title>Diet engine RAG architecture</title>
@@ -266,19 +267,22 @@
 								<text x="230" y="193" text-anchor="middle" font-size="10" font-weight="600" fill="#7c1a1a" dominant-baseline="central">LLM response + citations</text>
 							</svg>
 						</div>
+					</div>
+					<div class="article-right">
+						<header>
+							<span class="project-tag">Advanced RAG</span>
+							<h2>Agentic Diet Engine</h2>
+						</header>
+						<p>Advanced RAG pipeline for personalized health AI. Hybrid search combining vector and keyword retrieval over ChromaDB. LangSmith observability traces every retrieval step. FastAPI backend with Streamlit UI, deployed on Hugging Face via GitHub Actions CI/CD.</p>
 						<div class="tech-stack">LangChain &middot; ChromaDB &middot; LangSmith &middot; FastAPI &middot; Streamlit &middot; Hugging Face &middot; GitHub Actions &middot; Docker</div>
 						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/agentic-diet-engine" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">Live on Hugging Face</span>
-					</article>
+					</div>
+				</article>
 
 					<!-- MULTI AGENT -->
 					<article>
-						<header>
-							<span class="project-tag">Multi-Agent Systems</span>
-							<h2>Multi-Agent A2A Framework</h2>
-						</header>
-						<p>Multi-agent system with LangGraph and A2A SDK for agent-to-agent communication. Microsoft Presidio scrubs PII from all inter-agent messages. OpenTelemetry traces every hop. Jailbreak defense layer on all inputs. Built for enterprise environments where data privacy is non-negotiable. Applicable to supply chain, logistics, and regulated industry deployments.</p>
-
+					<div class="article-left">
 						<div class="arch-diagram">
 							<svg width="100%" viewBox="0 0 460 210" role="img">
 								<title>Multi-agent A2A architecture</title>
@@ -312,19 +316,22 @@
 								<text x="230" y="185" text-anchor="middle" font-size="10" font-weight="600" fill="#444441" dominant-baseline="central">OpenTelemetry Tracing</text>
 							</svg>
 						</div>
+					</div>
+					<div class="article-right">
+						<header>
+							<span class="project-tag">Multi-Agent Systems</span>
+							<h2>Multi-Agent A2A Framework</h2>
+						</header>
+						<p>Multi-agent system with LangGraph and A2A SDK for agent-to-agent communication. Microsoft Presidio scrubs PII from all inter-agent messages. OpenTelemetry traces every hop. Jailbreak defense layer on all inputs. Built for enterprise environments where data privacy is non-negotiable. Applicable to supply chain, logistics, and regulated industry deployments.</p>
 						<div class="tech-stack">LangGraph &middot; A2A SDK &middot; Presidio &middot; OpenTelemetry &middot; LangChain &middot; Jailbreak Defense</div>
 						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/multi_agent" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">In Progress</span>
-					</article>
+					</div>
+				</article>
 
 					<!-- OWASP -->
 					<article>
-						<header>
-							<span class="project-tag">Security &amp; Adversarial AI</span>
-							<h2>OWASP LLM Security Implementations</h2>
-						</header>
-						<p>Production implementations of OWASP LLM Top 10 — not theory. Every risk has a vulnerable example and a mitigated example with real code. LLM01 Prompt Injection complete with 4-layer defense: input sanitization, structured separation, LLM Judge validation, and security logging. Applicable to any enterprise LLM deployment in regulated industries.</p>
-
+					<div class="article-left">
 						<div class="arch-diagram">
 							<svg width="100%" viewBox="0 0 460 210" role="img">
 								<title>OWASP LLM security defense layers</title>
@@ -351,13 +358,25 @@
 								<line x1="330" y1="159" x2="353" y2="159" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2" marker-end="url(#a4)"/>
 							</svg>
 						</div>
+					</div>
+					<div class="article-right">
+						<header>
+							<span class="project-tag">Security &amp; Adversarial AI</span>
+							<h2>OWASP LLM Security Implementations</h2>
+						</header>
+						<p>Production implementations of OWASP LLM Top 10 — not theory. Every risk has a vulnerable example and a mitigated example with real code. LLM01 Prompt Injection complete with 4-layer defense: input sanitization, structured separation, LLM Judge validation, and security logging. Applicable to any enterprise LLM deployment in regulated industries.</p>
 						<div class="tech-stack">Gemini API &middot; google-genai &middot; Presidio &middot; Pydantic &middot; OWASP LLM Top 10 &middot; MITRE ATLAS</div>
 						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/owasp-llm-security" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">Live</span>
-					</article>
+					</div>
+				</article>
 
 					<!-- SEMANTIC LAYER -->
-					<article>
+					<article class="no-diagram">
+					<div class="article-left">
+						
+					</div>
+					<div class="article-right">
 						<header>
 							<span class="project-tag">Enterprise AI Integration</span>
 							<h2>Enterprise AI Semantic Layer</h2>
@@ -366,7 +385,8 @@
 						<div class="tech-stack">Python &middot; Pydantic &middot; MCP Patterns &middot; Oracle EBS Mock &middot; Role-Based Permissions &middot; Anti-Corruption Layer &middot; DDD</div>
 						<ul class="actions special"><li><a href="https://github.com/dnyandeobharambe/enterprise-ai-semantic-layer" class="button small" target="_blank">View on GitHub</a></li></ul>
 						<span class="status-badge">Live</span>
-					</article>
+					</div>
+				</article>
 
 				</section>
 
