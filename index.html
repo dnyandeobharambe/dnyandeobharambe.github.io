@@ -94,14 +94,18 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			#main > .post.featured { padding: 3rem 2rem !important; border-bottom: 2px solid #eeeeee; text-align: center; }
-						.posts { display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem 2rem 2rem 2rem; max-width: 1100px; margin: 0 auto; }
-			.posts article { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 0.5px solid #e0e0e0; border-radius: 10px; overflow: hidden; background: #fff; }
-			.posts article .article-left { padding: 1.5rem; display: flex; flex-direction: column; gap: 10px; border-right: 0.5px solid #e0e0e0; }
-			.posts article .article-right { padding: 1.2rem; background: #f9f9f9; display: flex; align-items: center; justify-content: center; }
-			.posts article.no-diagram { grid-template-columns: 1fr; }
-			.posts article.no-diagram .article-left { border-right: none; }
-			.posts article:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-			@media (max-width: 768px) { .posts article { grid-template-columns: 1fr !important; } .posts article .article-left { border-right: none; border-bottom: 0.5px solid #e0e0e0; } } }
+						.posts { display: flex !important; flex-direction: column !important; gap: 1.2rem !important; padding: 1.5rem 2rem 2rem 2rem !important; max-width: 1100px !important; margin: 0 auto !important; }
+			.posts article { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 0 !important; border: 1px solid #ddd !important; border-radius: 8px !important; overflow: hidden !important; background: #fff !important; transform: none !important; box-shadow: none !important; width: 100% !important; float: none !important; }
+			.posts article:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07) !important; transform: none !important; }
+			.posts article .article-left { padding: 1.8rem !important; display: flex !important; flex-direction: column !important; gap: 12px !important; border-right: 1px solid #eee !important; min-width: 0 !important; }
+			.posts article .article-right { padding: 1.5rem !important; background: #f9f9f9 !important; display: flex !important; align-items: center !important; justify-content: center !important; min-width: 0 !important; }
+			.posts article .article-left h2 { font-size: 1.05rem !important; font-weight: 700 !important; text-transform: none !important; letter-spacing: 0 !important; line-height: 1.3 !important; margin-bottom: 0.3rem !important; color: #222 !important; }
+			.posts article .article-left p { font-size: 0.82rem !important; line-height: 1.6 !important; color: #555 !important; text-align: left !important; margin: 0 !important; }
+			.posts article .article-left header { margin: 0 !important; padding: 0 !important; border: none !important; }
+			.posts article .arch-diagram { width: 100% !important; margin: 0 !important; border: none !important; background: transparent !important; padding: 0 !important; }
+			.posts article.no-diagram { grid-template-columns: 1fr !important; }
+			.posts article.no-diagram .article-left { border-right: none !important; }
+			@media (max-width: 768px) { .posts article { grid-template-columns: 1fr !important; } .posts article .article-left { border-right: none !important; border-bottom: 1px solid #eee !important; } } }
 			.project-tag { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #888; margin-bottom: 0.5rem; display: block; }
 			.tech-stack { font-size: 0.68rem; font-family: "Courier New", Courier, monospace; color: #555; margin-top: 0.5rem; border-top: 1px solid #eee; padding-top: 0.5rem; }
 			.status-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.6rem; font-weight: bold; background: #eee; margin-top: 0.8rem; }
